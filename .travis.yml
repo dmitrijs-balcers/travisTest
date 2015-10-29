@@ -6,6 +6,7 @@ node_js:
   - "0.10"
 
 before_install:
+  - npm install -g velocity-cli
   - "curl -L https://raw.githubusercontent.com/dmitrijs-balcers/cah/master/meteor_install.sh | /bin/sh"
 before_script:
   - "export PATH=$HOME/.meteor:$PATH"
