@@ -12,4 +12,4 @@ before_install:
   - "npm install -g velocity-cli"
 
 script:
-  - "TEST_ENV=TEST spacejam test-packages --velocity --driver-package respondly:test-reporter"
+  - "TEST_ENV=TEST meteor test-packages --velocity --driver-package respondly:test-reporter"
