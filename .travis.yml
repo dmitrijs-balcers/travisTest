@@ -1,15 +1,15 @@
 ## Add this file to your meteor package as `.travis.yml`
 
-sudo: required
+sudo: false
 language: node_js
 node_js:
-  - "0.10"
+  - "0.10.36"
 
 before_install:
-  - "npm install -g velocity-cli"
-  - "npm install -g spacejam"
   - "curl -L https://raw.githubusercontent.com/dmitrijs-balcers/cah/master/meteor_install.sh | /bin/sh"
-before_script:
-  - "export PATH=$HOME/.meteor:$PATH"
+  - export PATH="$HOME/.meteor:$PATH"
+  - "npm install -g spacejam"
+  - "npm install -g velocity-cli"
+
 script:
   - "TEST_ENV=TEST spacejam test-packages --velocity --driver-package respondly:test-reporter"
