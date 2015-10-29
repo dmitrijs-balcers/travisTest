@@ -1,0 +1,11 @@
+## Add this file to your meteor package as `.travis.yml`
+
+sudo: required
+language: node_js
+node_js:
+  "0.10"
+
+before_install:
+  - "curl -L https://raw.githubusercontent.com/dmitrijs-balcers/cah/master/meteor_install.sh | /bin/sh"
+before_script:
+  - "export PATH=$HOME/.meteor:$PATH"
