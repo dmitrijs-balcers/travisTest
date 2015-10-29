@@ -10,3 +10,5 @@ before_install:
   - "curl -L https://raw.githubusercontent.com/dmitrijs-balcers/cah/master/meteor_install.sh | /bin/sh"
 before_script:
   - "export PATH=$HOME/.meteor:$PATH"
+test:
+  - TEST_ENV=TEST meteor test-packages --velocity --driver-package respondly:test-reporter
