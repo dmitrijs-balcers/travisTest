@@ -6,9 +6,10 @@ node_js:
   - "0.10"
 
 before_install:
-  - npm install -g velocity-cli
+  - "npm install -g velocity-cli"
+  - "npm install -g spacejam"
   - "curl -L https://raw.githubusercontent.com/dmitrijs-balcers/cah/master/meteor_install.sh | /bin/sh"
 before_script:
   - "export PATH=$HOME/.meteor:$PATH"
-test:
-  - TEST_ENV=TEST meteor test-packages --velocity --driver-package respondly:test-reporter
+script:
+  - "TEST_ENV=TEST spacejam test-packages --velocity --driver-package respondly:test-reporter"
